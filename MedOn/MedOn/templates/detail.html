@@ -1,0 +1,47 @@
+
+
+
+{% extends "base.html" %}
+
+
+
+
+<style>
+    {% block style %}
+        h1: {
+            color: #777777;}
+     {% endblock style %}
+</style>
+
+
+
+ {% block content %}
+     <div class="col-sm-6 col-sm-offset-3">
+{#     <div class="col-md-8">#}
+     {%  if instance.image %}
+     <img src=" {{ instance.image.url }}" class="img-responsive"/>
+     {% endif %}
+
+
+<h1> {{ instance.title}}<small>  <small>  {{ instance.timestamp }} </small></small> </h1>
+
+
+  <br/>
+     {{ instance.content | linebreaks}} <br/>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://CodingForEntrepreneurs.com/ ">
+      Share On Facebook </a>
+
+
+
+<div class="fb-comments"></div>
+
+
+{#</head>#}
+
+    {% endblock %}
+
+</div>
+</div>
+{#</body>#}
+{#</html>#}
